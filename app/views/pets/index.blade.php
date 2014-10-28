@@ -13,8 +13,8 @@
 
 	<p>Eloquent ORM practice links</p>
 	<ul>
-		<li><a href="{{URL::to('pets')}}">Show all pets</a></li>
-		<li><a href="{{URL::to('pets/pettype/dog')}}">Show only dogs</a></li>
-		<li><a href="{{URL::to('pets/ordered')}}">Order by age</a></li>
+		<li><a href="{{url('pets')}}">Show all pets</a></li>
+		<li><a href="{{url('pets/pettype/dog')}}">Show only dogs</a></li>
+		<li><a href="{{url('pets/ordered')}}">Order by age</a></li>
 	</ul>
 @stop

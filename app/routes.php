@@ -13,22 +13,21 @@
 
 Route::model('pet','Pet');
 
-Route::get('/', function()
-{
+Route::get('/', function() {
 	return Redirect::to('pets');
 });
 
 Route::get('pets', function() {
 	$pets = Pet::all();
-	return View::make('pets/index')->with('pets',$pets);
+	return View::make('pets.index')->with('pets',$pets);
 });
 
 Route::get('pets/ordered', function() {
 	$pets = Pet::orderBy('age', 'ASC')->get();
-	return View::make('pets/index')->with('pets',$pets);
+	return View::make('pets.index')->with('pets',$pets);
 });
 
 Route::get('pets/pettype/dog', function() {
 	$pettype = Pettype::where('name','dog')->first();
-	return View::make('pets/index')->with('pets',$pettype->pets);
+	return View::make('pets.index')->with('pets',$pettype->pets);
 });
